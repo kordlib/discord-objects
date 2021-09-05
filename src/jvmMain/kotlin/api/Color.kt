@@ -1,5 +1,7 @@
-package api
+@file:JvmName("ColorExtensions")
 
-import dev.kord.discord.objects.api.Color
+package dev.kord.discord.objects.api
 
 val java.awt.Color.kColor get() = Color(rgb)
+
+fun Color(color: java.awt.Color): Color = Color(color.rgb)

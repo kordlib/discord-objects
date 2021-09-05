@@ -1,6 +1,6 @@
 package dev.kord.discord.objects.rest
 
-import dev.kord.common.entity.DiscordGuildIntegrations
+import dev.kord.discord.objects.DiscordGuildIntegrations
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

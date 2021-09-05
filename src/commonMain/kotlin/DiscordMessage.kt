@@ -333,7 +333,7 @@ class MessageFlags internal constructor(val code: Int) {
         return builder.flags()
     }
 
-    override fun toString(): String = "MessageFlags(flags=${flags.toString()})"
+    override fun toString(): String = "MessageFlags(flags=$flags)"
 
     internal object Serializer : KSerializer<MessageFlags> {
 

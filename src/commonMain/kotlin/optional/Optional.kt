@@ -8,6 +8,7 @@ import dev.kord.discord.objects.optional.Optional.*
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.SerializationException
 import kotlin.js.JsName
+import kotlin.jvm.JvmName
 
 /**
  * Represents a value that encapsulates all [three possible states of a value in the Discord API](https://discord.com/developers/docs/reference#nullable-and-optional-resource-fields).
@@ -208,7 +209,8 @@ inline fun <E : Any, T : Any> Optional<E>.flatMap(mapper: (E) -> Optional<T>): O
 }
 
 @Suppress("UNCHECKED_CAST")
-@JsName("mapNullable")
+@JsName("mapNullableResult")
+@JvmName("mapNullableResult")
 inline fun <E : Any, T : Any> Optional<E?>.map(mapper: (E) -> T): Optional<T?> = when (this) {
     is Missing, is Null<*> -> this as Optional<T>
     is Value -> Value(mapper(value!!))
@@ -242,6 +244,7 @@ inline fun <E : Any> Optional<E>.mapToSnowflake(mapper: (E) -> Snowflake): Optio
 }
 
 @JsName("mapNullableSnowflake")
+@JvmName("mapNullableSnowflake")
 inline fun <E : Any> Optional<E?>.mapToSnowflake(mapper: (E) -> Snowflake): OptionalSnowflake? = when (this) {
     is Missing -> OptionalSnowflake.Missing
     is Null<*> -> null

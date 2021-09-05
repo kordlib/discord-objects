@@ -146,7 +146,7 @@ data class Overwrite(
     val allow: Permissions,
     val deny: Permissions,
 ) {
-    companion object;
+    companion object
 
 }
 

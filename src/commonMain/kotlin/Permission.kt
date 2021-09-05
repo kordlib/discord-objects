@@ -13,6 +13,7 @@ import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 import kotlin.js.JsName
+import kotlin.jvm.JvmName
 
 
 @Serializable(with = Permissions.Companion::class)
@@ -116,13 +117,14 @@ fun Permissions(permissions: Iterable<Permission>) = Permissions {
 
 
 @JsName("PermissionWithIterable")
+@JvmName("PermissionWithIterable")
 fun Permissions(permissions: Iterable<Permissions>) = Permissions {
     permissions.forEach { +it }
 }
 
 
 sealed class Permission(val code: DiscordBitSet) {
-    constructor(vararg values: Long) : this(DiscordBitSet(values))
+    constructor(value: Long) : this(DiscordBitSet(value))
 
     object CreateInstantInvite : Permission(0x00000001)
     object KickMembers : Permission(0x00000002)
@@ -161,6 +163,7 @@ sealed class Permission(val code: DiscordBitSet) {
     object CreatePublicThreads : Permission(0x0800000000)
     object CreatePrivateThreads : Permission(0x1000000000)
     object SendMessagesInThreads : Permission(0x4000000000)
+    @Suppress("SELF_CALL_IN_NESTED_OBJECT_CONSTRUCTOR_WARNING")
     object All : Permission(values.fold(EmptyBitSet()) { acc, value -> acc.add(value.code); acc })
 
     companion object {

@@ -131,7 +131,9 @@ sealed class Choice<out T> {
     class IntChoice(override val name: String, override val value: Int) : Choice<Int>()
     class NumberChoice(override val name: String, override val value: Double) : Choice<Double>()
     class StringChoice(override val name: String, override val value: String) : Choice<String>()
-    internal class ChoiceSerializer<T>(serializer: KSerializer<T>) : KSerializer<Choice<*>> {
+    internal class ChoiceSerializer<T>(
+        @Suppress("UNUSED_PARAMETER") serializer: KSerializer<T>
+    ) : KSerializer<Choice<*>> {
         override val descriptor: SerialDescriptor = buildClassSerialDescriptor("Choice") {
             element<String>("name")
             element<String>("value")

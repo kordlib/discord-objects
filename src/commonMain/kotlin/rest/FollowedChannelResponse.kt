@@ -1,6 +1,6 @@
 package dev.kord.discord.objects.rest
 
-import dev.kord.common.entity.Snowflake
+import dev.kord.discord.objects.Snowflake
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
