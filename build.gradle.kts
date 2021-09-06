@@ -39,6 +39,7 @@ kotlin {
     sourceSets {
         all {
             languageSettings.useExperimentalAnnotation("kotlin.RequiresOptIn")
+            languageSettings.useExperimentalAnnotation("kotlin.contracts.ExperimentalContracts")
         }
 
         val commonMain by getting {
