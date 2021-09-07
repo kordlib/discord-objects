@@ -4,7 +4,7 @@ import dev.kord.discord.objects.Snowflake
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-class MessageReactionRemoveEmoji(
+data class MessageReactionRemoveEmoji(
     override val data: Data,
     override val sequence: Int
 ) : DispatchEvent<MessageReactionRemoveEmoji.Data>() {

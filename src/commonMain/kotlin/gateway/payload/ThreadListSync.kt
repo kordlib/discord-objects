@@ -7,7 +7,7 @@ import dev.kord.discord.objects.optional.Optional
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-class ThreadListSync(
+data class ThreadListSync(
     override val data: Data,
     override val sequence: Int
 ) : DispatchEvent<ThreadListSync.Data>() {

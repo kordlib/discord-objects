@@ -2,7 +2,7 @@ package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.DiscordUpdatedGuildMember
 
-class GuildMemberUpdate(
+data class GuildMemberUpdate(
     override val data: DiscordUpdatedGuildMember,
     override val sequence: Int
 ) : DispatchEvent<DiscordUpdatedGuildMember>() {

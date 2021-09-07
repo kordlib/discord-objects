@@ -9,7 +9,7 @@ import dev.kord.discord.objects.optional.OptionalSnowflake
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-class InviteCreate(
+data class InviteCreate(
     override val data: Data,
     override val sequence: Int
 ): DispatchEvent<InviteCreate.Data>() {

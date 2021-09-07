@@ -3,7 +3,7 @@ package dev.kord.discord.objects.gateway.payload
 import dev.kord.discord.objects.gateway.Opcode
 import kotlinx.serialization.Serializable
 
-class Hello(val data: Data) : Event {
+data class Hello(val data: Data) : Event {
 
     override val opcode: Opcode
         get() = Opcode.Hello

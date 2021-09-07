@@ -2,7 +2,7 @@ package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.DiscordTyping
 
-class TypingStart(
+data class TypingStart(
     override val data: DiscordTyping,
     override val sequence: Int
 ) : DispatchEvent<DiscordTyping>() {

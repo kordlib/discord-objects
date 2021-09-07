@@ -4,7 +4,7 @@ import dev.kord.discord.objects.Snowflake
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-class InviteDelete(
+data class InviteDelete(
     override val data: Data,
     override val sequence: Int
 ): DispatchEvent<InviteDelete.Data>() {

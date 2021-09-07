@@ -2,7 +2,7 @@ package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.DiscordUnavailableGuild
 
-class GuildDelete(
+data class GuildDelete(
     override val data: DiscordUnavailableGuild,
     override val sequence: Int
 ) : DispatchEvent<DiscordUnavailableGuild>() {

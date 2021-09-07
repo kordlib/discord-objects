@@ -7,7 +7,7 @@ import dev.kord.discord.objects.optional.Optional
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-class GuildMembersChunk(
+data class GuildMembersChunk(
     override val data: Data,
     override val sequence: Int
 ): DispatchEvent<GuildMembersChunk.Data>() {

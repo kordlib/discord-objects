@@ -2,7 +2,7 @@ package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.DiscordGuildBan
 
-class GuildBanRemove(
+data class GuildBanRemove(
     override val data: DiscordGuildBan,
     override val sequence: Int
 ) : DispatchEvent<DiscordGuildBan>() {

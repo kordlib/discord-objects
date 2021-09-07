@@ -6,8 +6,7 @@ import dev.kord.discord.objects.optional.Optional
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-
-class ThreadMembersUpdate(
+data class ThreadMembersUpdate(
     override val data: Data,
     override val sequence: Int
 ) : DispatchEvent<ThreadMembersUpdate.Data>() {

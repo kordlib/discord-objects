@@ -2,7 +2,7 @@ package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.DiscordGuildRole
 
-class GuildRoleCreate(
+data class GuildRoleCreate(
     override val data: DiscordGuildRole,
     override val sequence: Int
 ): DispatchEvent<DiscordGuildRole>() {

@@ -2,7 +2,7 @@ package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.DiscordDeletedGuildRole
 
-class GuildRoleDelete(
+data class GuildRoleDelete(
     override val data: DiscordDeletedGuildRole,
     override val sequence: Int
 ): DispatchEvent<DiscordDeletedGuildRole>() {

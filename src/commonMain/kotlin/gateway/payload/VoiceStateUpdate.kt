@@ -2,7 +2,7 @@ package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.DiscordVoiceState
 
-class VoiceStateUpdate(
+data class VoiceStateUpdate(
     override val data: DiscordVoiceState,
     override val sequence: Int
 ) : DispatchEvent<DiscordVoiceState>() {

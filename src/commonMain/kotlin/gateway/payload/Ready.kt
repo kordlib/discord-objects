@@ -9,7 +9,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonElement
 
-class Ready(
+data class Ready(
     override val data: Data,
     override val sequence: Int
 ) : DispatchEvent<Ready.Data>() {

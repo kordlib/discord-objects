@@ -1,6 +1,6 @@
 package dev.kord.discord.objects.gateway.payload
 
-class Resumed(
+data class Resumed(
     override val sequence: Int
 ) : DispatchEvent<Unit>() {
 

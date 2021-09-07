@@ -2,7 +2,7 @@ package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.gateway.Opcode
 
-class Heartbeat(
+data class Heartbeat(
     val data: Int?
 ) : Event, Command {
     override val opcode: Opcode get() = Opcode.Heartbeat

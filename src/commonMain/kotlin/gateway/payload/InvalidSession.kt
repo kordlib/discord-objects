@@ -2,7 +2,7 @@ package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.gateway.Opcode
 
-class InvalidSession(
+data class InvalidSession(
     val data: Boolean?
 ) : Event {
 

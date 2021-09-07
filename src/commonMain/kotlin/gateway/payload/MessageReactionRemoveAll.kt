@@ -2,7 +2,7 @@ package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.AllRemovedMessageReactions
 
-class MessageReactionRemoveAll(
+data class MessageReactionRemoveAll(
     override val data: AllRemovedMessageReactions,
     override val sequence: Int
 ) : DispatchEvent<AllRemovedMessageReactions>() {

@@ -2,7 +2,7 @@ package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.DiscordThreadMember
 
-class ThreadMemberUpdate(
+data class ThreadMemberUpdate(
     override val data: DiscordThreadMember,
     override val sequence: Int
 ) : DispatchEvent<DiscordThreadMember>() {
