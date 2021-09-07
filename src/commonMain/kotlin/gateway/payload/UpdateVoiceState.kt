@@ -1,13 +1,12 @@
-package dev.kord.discord.objects.dev.kord.discord.objects.gateway.payload
+package dev.kord.discord.objects.gateway.payload
 
 import dev.kord.discord.objects.Snowflake
 import dev.kord.discord.objects.gateway.Opcode
-import dev.kord.discord.objects.gateway.payload.Command
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class VoiceStateUpdate(
+data class UpdateVoiceState(
     @SerialName("guild_id")
     val guildId: Snowflake,
     @SerialName("channel_id")

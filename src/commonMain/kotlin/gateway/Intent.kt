@@ -66,7 +66,7 @@ sealed class Intent(val code: DiscordBitSet) {
 
     /**
      * Enables the following events:
-     * - [VoiceStateUpdate]
+     * - [UpdateVoiceState]
      */
     object GuildVoiceStates : Intent(1 shl 7)
 
