@@ -135,6 +135,8 @@ sealed class EventName(val value: String) {
                 StageInstanceCreate,
                 StageInstanceDelete,
                 StageInstanceUpdate,
+                Ready,
+                Resumed,
                 TypingStart,
                 UserUpdate,
                 VoiceServerUpdate,
