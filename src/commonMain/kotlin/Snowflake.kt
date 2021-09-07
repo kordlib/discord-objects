@@ -9,6 +9,7 @@ import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import kotlin.jvm.JvmInline
 import kotlin.time.Duration
 import kotlin.time.ExperimentalTime
 import kotlin.time.TimeMark
@@ -24,8 +25,9 @@ import kotlin.time.TimeMark
  *
  * @constructor Creates a Snowflake from a given ULong [value].
  */
+@JvmInline
 @Serializable(with = Snowflake.Serializer::class)
-class Snowflake(val value: ULong) : Comparable<Snowflake> {
+value class Snowflake(val value: ULong) : Comparable<Snowflake> {
 
     /**
      * Creates a Snowflake from a given String [value], parsing it as a [ULong] value.
@@ -66,12 +68,6 @@ class Snowflake(val value: ULong) : Comparable<Snowflake> {
     override fun compareTo(other: Snowflake): Int = value.shr(22).compareTo(other.value.shr(22))
 
     override fun toString(): String = "Snowflake(value=$value)"
-
-    override fun hashCode(): Int = value.hashCode()
-
-    override fun equals(other: Any?): Boolean {
-        return (other as? Snowflake ?: return false).value == value
-    }
 
     companion object {
         private const val discordEpochLong = 1420070400000L                                 // 42 one bits

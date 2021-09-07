@@ -69,13 +69,9 @@ sealed class OptionalSnowflake {
      * Represents a field that was assigned a non-null value in the serialized entity.
      * Equality and hashcode is implemented through its [value].
      *
-     * @param uLongValue the value this optional wraps.
+     * @param value the value this optional wraps.
      */
-    class Value(private val uLongValue: ULong) : OptionalSnowflake() {
-
-        constructor(value: Snowflake) : this(value.value)
-
-        override val value: Snowflake get() = Snowflake(uLongValue)
+    class Value(override val value: Snowflake) : OptionalSnowflake() {
 
         /**
          * Destructures this optional to its [value].
@@ -98,7 +94,7 @@ sealed class OptionalSnowflake {
             get() = @OptIn(ExperimentalUnsignedTypes::class) ULong.serializer().descriptor
 
         override fun deserialize(decoder: Decoder): OptionalSnowflake =
-            Value(decoder.decodeInline(descriptor).decodeLong().toULong())
+            Value(Snowflake.serializer().deserialize(decoder))
 
         override fun serialize(encoder: Encoder, value: OptionalSnowflake) = when (value) {
             Missing -> Unit // ignore value
@@ -118,7 +114,7 @@ val OptionalSnowflake?.value: Snowflake?
         OptionalSnowflake.Missing, null -> null
     }
 
-fun Snowflake.optionalSnowflake(): OptionalSnowflake.Value = OptionalSnowflake.Value(this.value)
+fun Snowflake.optionalSnowflake(): OptionalSnowflake.Value = OptionalSnowflake.Value(this)
 
 @JsName("optionalNullable")
 @JvmName("optionalNullable")
