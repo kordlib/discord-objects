@@ -1,0 +1,25 @@
+{
+  "type": 0,
+  "topic": "topic",
+  "rate_limit_per_user": 0,
+  "position": 21,
+  "permission_overwrites": [],
+  "parent_id": "887589690822254602",
+  "nsfw": false,
+  "name": "text-channel",
+  "last_message_id": null,
+  "id": "887589691984064552",
+  "guild_id": "163717776609902592",
+  "guild_hashes": {
+    "version": 1,
+    "roles": {
+      "hash": "/pRM4xhZPYc"
+    },
+    "metadata": {
+      "hash": "p4PA4m9M8HY"
+    },
+    "channels": {
+      "hash": "zyIZNpiDWwU"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "t": "GUILD_MEMBER_REMOVE",
+  "s": 16,
+  "op": 0,
+  "d": {
+    "user": {
+      "username": "a",
+      "public_flags": 65536,
+      "id": "1234",
+      "discriminator": "9768",
+      "bot": true,
+      "avatar": "7861351"
+    },
+    "guild_id": "163717776609902592"
+  }
+}

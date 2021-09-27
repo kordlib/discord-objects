@@ -1,0 +1,14 @@
+{
+  "t": "PRESENCE_UPDATE",
+  "s": 4,
+  "op": 0,
+  "d": {
+    "user": {
+      "id": "112547982808715264"
+    },
+    "status": "offline",
+    "guild_id": "163717776609902592",
+    "client_status": {},
+    "activities": []
+  }
+}

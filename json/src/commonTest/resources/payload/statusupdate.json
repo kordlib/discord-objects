@@ -1,0 +1,17 @@
+{
+  "op": 3,
+  "d": {
+    "since": 1632345394,
+    "activities": [
+      {
+        "name": "status",
+        "type": 0,
+        "url": null
+      }
+    ],
+    "status": "idle",
+    "afk": true
+  },
+  "s": null,
+  "t": null
+}

@@ -1,0 +1,16 @@
+{
+  "op":2,
+  "d":{
+    "token": "hunter2",
+    "properties": {
+      "$os": "kord.os",
+      "$browser": "kord",
+      "$device": "kord"
+    },
+    "compress": true,
+    "large_threshold": 250,
+    "intents": "123456"
+  },
+  "s":null,
+  "t":null
+}

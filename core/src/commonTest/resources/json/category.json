@@ -1,0 +1,22 @@
+{
+  "type": 4,
+  "position": 2,
+  "permission_overwrites": [],
+  "parent_id": null,
+  "nsfw": false,
+  "name": "category channel",
+  "id": "887589690822254602",
+  "guild_id": "163717776609902592",
+  "guild_hashes": {
+    "version": 1,
+    "roles": {
+      "hash": "/pRM4xhZPYc"
+    },
+    "metadata": {
+      "hash": "p4PA4m9M8HY"
+    },
+    "channels": {
+      "hash": "N8uOgPkUHvM"
+    }
+  }
+}

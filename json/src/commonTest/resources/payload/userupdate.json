@@ -1,0 +1,12 @@
+{
+  "t": "USER_UPDATE",
+  "s": 3,
+  "op": 0,
+  "d": {
+    "username": "A",
+    "public_flags": 64,
+    "id": "163717776609902592",
+    "discriminator": "6010",
+    "avatar": "6c"
+  }
+}

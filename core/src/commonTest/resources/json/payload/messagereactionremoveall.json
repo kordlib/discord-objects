@@ -1,0 +1,10 @@
+{
+  "t": "MESSAGE_REACTION_REMOVE_ALL",
+  "s": 3,
+  "op": 0,
+  "d": {
+    "channel_id": 12345678989765,
+    "message_id": 12345678989765,
+    "guild_id": 12345678989765
+  }
+}

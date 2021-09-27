@@ -1,0 +1,10 @@
+{
+  "op": 0,
+  "t": "VOICE_SERVER_UPDATE",
+  "s": 1000,
+  "d": {
+    "token": "my_token",
+    "guild_id": "41771983423143937",
+    "endpoint": "smart.loyal.discord.gg"
+  }
+}

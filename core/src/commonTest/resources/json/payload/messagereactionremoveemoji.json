@@ -1,0 +1,14 @@
+{
+  "t": "MESSAGE_REACTION_REMOVE_EMOJI",
+  "s": 5,
+  "op": 0,
+  "d": {
+    "message_id": "889185356904292398",
+    "emoji": {
+      "name": "?",
+      "id": null
+    },
+    "channel_id": "163717776609902592",
+    "guild_id": "163717776609902592"
+  }
+}

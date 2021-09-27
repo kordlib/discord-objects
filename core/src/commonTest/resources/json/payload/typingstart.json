@@ -1,0 +1,27 @@
+{
+  "t": "TYPING_START",
+  "s": 12,
+  "op": 0,
+  "d": {
+    "user_id": "112547982808715264",
+    "timestamp": 123,
+    "member": {
+      "user": {
+        "username": "a",
+        "id": "112547982808715264",
+        "discriminator": "0000",
+        "avatar": "4693"
+      },
+      "roles": [
+        "112547982808715264"
+      ],
+      "nick": null,
+      "mute": false,
+      "joined_at": "2021-09-18T21:54:35.970753+00:00",
+      "hoisted_role": null,
+      "deaf": false
+    },
+    "channel_id": "112547982808715264",
+    "guild_id": "112547982808715264"
+  }
+}

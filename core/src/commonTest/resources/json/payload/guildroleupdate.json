@@ -1,0 +1,18 @@
+{
+  "t": "GUILD_ROLE_UPDATE",
+  "s": 1,
+  "op": 0,
+  "d": {
+    "role": {
+      "position": 4,
+      "permissions": "12457",
+      "name": "role",
+      "mentionable": false,
+      "managed": false,
+      "id": "1234567898765432",
+      "hoist": false,
+      "color": 4444444
+    },
+    "guild_id": "1234567898765432"
+  }
+}

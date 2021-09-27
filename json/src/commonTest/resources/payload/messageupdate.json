@@ -1,0 +1,47 @@
+{
+  "t": "MESSAGE_UPDATE",
+  "s": 9,
+  "op": 0,
+  "d": {
+    "type": 0,
+    "tts": false,
+    "timestamp": "2021-09-18T21:49:28.281000+00:00",
+    "pinned": false,
+    "mentions": [],
+    "mention_roles": [],
+    "mention_everyone": false,
+    "member": {
+      "roles": [
+        "709664688245571664",
+        "829751356020752394",
+        "829751408358195210",
+        "829751383712071700"
+      ],
+      "premium_since": null,
+      "pending": false,
+      "nick": "a",
+      "mute": false,
+      "joined_at": "2016-03-27T18:35:59.676000+00:00",
+      "is_pending": false,
+      "hoisted_role": "709664688245571664",
+      "deaf": false,
+      "avatar": null
+    },
+    "id": "888904585706627133",
+    "flags": 0,
+    "embeds": [],
+    "edited_timestamp": "2021-09-18T21:49:32.388695+00:00",
+    "content": "a",
+    "components": [],
+    "channel_id": "163717776609902592",
+    "author": {
+      "username": "a",
+      "public_flags": 64,
+      "id": "112547982808715264",
+      "discriminator": "6010",
+      "avatar": "6c005a7e692f06dcf9e5f4f30ccd97bd"
+    },
+    "attachments": [],
+    "guild_id": "163717776609902592"
+  }
+}

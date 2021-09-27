@@ -1,0 +1,25 @@
+{
+  "user_limit": 0,
+  "type": 2,
+  "rtc_region": null,
+  "position": 3,
+  "permission_overwrites": [],
+  "parent_id": "887589690822254602",
+  "nsfw": false,
+  "name": "voice channel",
+  "id": "887589693129121832",
+  "guild_id": "163717776609902592",
+  "guild_hashes": {
+    "version": 1,
+    "roles": {
+      "hash": "/pRM4xhZPYc"
+    },
+    "metadata": {
+      "hash": "p4PA4m9M8HY"
+    },
+    "channels": {
+      "hash": "o2MdA7YKgVo"
+    }
+  },
+  "bitrate": 64000
+}

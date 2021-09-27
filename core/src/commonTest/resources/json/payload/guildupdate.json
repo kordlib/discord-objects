@@ -1,0 +1,64 @@
+{
+  "t": "GUILD_UPDATE",
+  "s": 1,
+  "op": 0,
+  "d": {
+    "nsfw": false,
+    "widget_channel_id": null,
+    "system_channel_id": "123456789012345678",
+    "premium_tier": 0,
+    "system_channel_flags": 0,
+    "discovery_splash": null,
+    "application_id": null,
+    "owner_id": "123456789012345678",
+    "banner": null,
+    "guild_id": "123456789012345678",
+    "features": [],
+    "id": "123456789012345678",
+    "public_updates_channel_id": null,
+    "verification_level": 0,
+    "roles": [
+      {
+        "position": 0,
+        "permissions": "104324672",
+        "name": "@everyone",
+        "mentionable": false,
+        "managed": false,
+        "id": "123456789012345678",
+        "hoist": false,
+        "color": 0
+      }
+    ],
+    "embed_channel_id": null,
+    "splash": null,
+    "afk_timeout": 300,
+    "vanity_url_code": null,
+    "icon": "6531903a5932790a6ab085db4dad21b8",
+    "emojis": [
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "emoji",
+        "managed": false,
+        "id": "123456789012345678",
+        "available": true,
+        "animated": false
+      }
+    ],
+    "preferred_locale": "en-US",
+    "region": "us-south",
+    "explicit_content_filter": 0,
+    "rules_channel_id": null,
+    "default_message_notifications": 0,
+    "name": "test",
+    "max_members": 250000,
+    "widget_enabled": false,
+    "description": null,
+    "embed_enabled": false,
+    "premium_subscription_count": 0,
+    "mfa_level": 0,
+    "afk_channel_id": null,
+    "max_presences": null,
+    "nsfw_level": 0
+  }
+}

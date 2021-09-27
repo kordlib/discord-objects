@@ -1,0 +1,43 @@
+{
+  "t": "INTEGRATION_UPDATE",
+  "s": 4,
+  "op": 0,
+  "d": {
+    "type": "discord",
+    "name": "a",
+    "id": "740659219646652420",
+    "guild_hashes": {
+      "version": 1,
+      "roles": {
+        "hash": "/pRM4xhZPYc"
+      },
+      "metadata": {
+        "hash": "0zcbxvJLNec"
+      },
+      "channels": {
+        "hash": "o2MdA7YKgVo"
+      }
+    },
+    "enabled": true,
+    "application": {
+      "summary": "",
+      "name": "a",
+      "id": "720533894616711288",
+      "icon": "0122faa30b84e8b1550bc3c39a2a0088",
+      "description": "",
+      "bot": {
+        "username": "a",
+        "public_flags": 0,
+        "id": "720533834616711298",
+        "discriminator": "0000",
+        "bot": true,
+        "avatar": "0122faa80b82e8b1550bc3c39a2a0091"
+      }
+    },
+    "account": {
+      "name": "a",
+      "id": "720533894616711288"
+    },
+    "guild_id": "113714776309902592"
+  }
+}

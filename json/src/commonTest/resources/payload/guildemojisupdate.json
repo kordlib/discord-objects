@@ -1,0 +1,499 @@
+{
+  "t": "GUILD_EMOJIS_UPDATE",
+  "s": 3,
+  "op": 0,
+  "d": {
+    "guild_id": "163717776609902592",
+    "guild_hashes": {
+      "version": 1,
+      "roles": {
+        "hash": "/pRM4xhZPYc"
+      },
+      "metadata": {
+        "hash": "0zcbxvJLNec"
+      },
+      "channels": {
+        "hash": "o2MdA7YKgVo"
+      }
+    },
+    "emojis": [
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "a",
+        "managed": false,
+        "id": "340186058706911232",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "b",
+        "managed": false,
+        "id": "438438237770612758",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "c",
+        "managed": false,
+        "id": "608559725876871199",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "d",
+        "managed": false,
+        "id": "608560240815898625",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "e",
+        "managed": false,
+        "id": "608560436329185289",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "f",
+        "managed": false,
+        "id": "608567093448671232",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "g",
+        "managed": false,
+        "id": "608600708924833826",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "h",
+        "managed": false,
+        "id": "608695028646150145",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "i",
+        "managed": false,
+        "id": "635073206360866816",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "j",
+        "managed": false,
+        "id": "635073228548603915",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "k",
+        "managed": false,
+        "id": "635073834609016842",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "l",
+        "managed": false,
+        "id": "635074117690720256",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "m",
+        "managed": false,
+        "id": "641680343664951296",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "n",
+        "managed": false,
+        "id": "641909370963230732",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "o",
+        "managed": false,
+        "id": "641916231510786048",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "p",
+        "managed": false,
+        "id": "641935694901674004",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "q",
+        "managed": false,
+        "id": "648952922432077825",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "r",
+        "managed": false,
+        "id": "657333329842012181",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "s",
+        "managed": false,
+        "id": "667795264098009118",
+        "available": true,
+        "animated": true
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "t",
+        "managed": false,
+        "id": "671835604350271538",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "u",
+        "managed": false,
+        "id": "677438512735453209",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "v",
+        "managed": false,
+        "id": "694569884025356329",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "w",
+        "managed": false,
+        "id": "696434490024657056",
+        "available": true,
+        "animated": true
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "x",
+        "managed": false,
+        "id": "711498282949673010",
+        "available": true,
+        "animated": true
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "y",
+        "managed": false,
+        "id": "715102093454737411",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "z",
+        "managed": false,
+        "id": "718119046012469358",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "aa",
+        "managed": false,
+        "id": "718745805246169089",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ab",
+        "managed": false,
+        "id": "721461988575674459",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ac",
+        "managed": false,
+        "id": "722407595620434052",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ad",
+        "managed": false,
+        "id": "724339666869813360",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ae",
+        "managed": false,
+        "id": "724670682499383308",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "af",
+        "managed": false,
+        "id": "725734926585954366",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ag",
+        "managed": false,
+        "id": "727118412723257367",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ah",
+        "managed": false,
+        "id": "727118693447761940",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ai",
+        "managed": false,
+        "id": "727119138727919678",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "aj",
+        "managed": false,
+        "id": "729993981177364550",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ak",
+        "managed": false,
+        "id": "739470426052493342",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "al",
+        "managed": false,
+        "id": "739470463130009601",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "am",
+        "managed": false,
+        "id": "739470492041478174",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "an",
+        "managed": false,
+        "id": "743466434797109400",
+        "available": true,
+        "animated": true
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ao",
+        "managed": false,
+        "id": "747484906262757567",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ap",
+        "managed": false,
+        "id": "748810057084436572",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "aq",
+        "managed": false,
+        "id": "749323911459635250",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ar",
+        "managed": false,
+        "id": "749324121514704946",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "as",
+        "managed": false,
+        "id": "768920997176541244",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "at",
+        "managed": false,
+        "id": "768921342803443713",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "au",
+        "managed": false,
+        "id": "794350130396266497",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "av",
+        "managed": false,
+        "id": "810212438863118356",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "aw",
+        "managed": false,
+        "id": "810951258005438555",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ax",
+        "managed": false,
+        "id": "823993673284190279",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ay",
+        "managed": false,
+        "id": "836891600797302797",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "az",
+        "managed": false,
+        "id": "853699097323896852",
+        "available": true,
+        "animated": false
+      },
+      {
+        "roles": [],
+        "require_colons": true,
+        "name": "ba",
+        "managed": false,
+        "id": "858634958557282344",
+        "available": true,
+        "animated": false
+      }
+    ]
+  }
+}

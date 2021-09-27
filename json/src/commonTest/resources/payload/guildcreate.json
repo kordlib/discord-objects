@@ -1,0 +1,64 @@
+{
+  "op": 0,
+  "t": "GUILD_CREATE",
+  "s": 1000,
+  "d": {
+    "id": "163717776609902592",
+    "name": "idk",
+    "icon": "4814f54259d2d6a7e2ddc4fd1e0832bb",
+    "description": null,
+    "splash": null,
+    "discovery_splash": null,
+    "features": [],
+    "emojis": [
+      {
+        "name": "testmini",
+        "roles": [],
+        "id": "608559725876871199",
+        "require_colons": true,
+        "managed": false,
+        "animated": false,
+        "available": true
+      }
+    ],
+    "stickers": [],
+    "banner": null,
+    "owner_id": "112547982808715264",
+    "application_id": null,
+    "region": "amsterdam",
+    "afk_channel_id": null,
+    "afk_timeout": 300,
+    "system_channel_id": null,
+    "widget_enabled": false,
+    "widget_channel_id": null,
+    "verification_level": 0,
+    "roles": [
+      {
+        "id": "163717776609902592",
+        "name": "@everyone",
+        "permissions": "1071631564353",
+        "position": 0,
+        "color": 0,
+        "hoist": false,
+        "managed": false,
+        "mentionable": false,
+        "icon": null
+      }
+    ],
+    "default_message_notifications": 1,
+    "mfa_level": 0,
+    "explicit_content_filter": 0,
+    "max_presences": null,
+    "max_members": 250000,
+    "max_video_channel_users": 25,
+    "vanity_url_code": null,
+    "premium_tier": 0,
+    "premium_subscription_count": 0,
+    "system_channel_flags": 0,
+    "preferred_locale": "en-US",
+    "rules_channel_id": null,
+    "public_updates_channel_id": null,
+    "nsfw": false,
+    "nsfw_level": 0
+  }
+}

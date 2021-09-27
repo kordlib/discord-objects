@@ -1,0 +1,21 @@
+{
+  "t": "GUILD_ROLE_DELETE",
+  "s": 6,
+  "op": 0,
+  "d": {
+    "role_id": "889623659440922655",
+    "guild_id": "163717776609902592",
+    "guild_hashes": {
+      "version": 1,
+      "roles": {
+        "hash": "HqR97R+VLU8"
+      },
+      "metadata": {
+        "hash": "0zcbxvJLNec"
+      },
+      "channels": {
+        "hash": "o2MdA7YKgVo"
+      }
+    }
+  }
+}

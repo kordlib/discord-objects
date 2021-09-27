@@ -1,0 +1,39 @@
+{
+  "t": "MESSAGE_REACTION_ADD",
+  "s": 3,
+  "op": 0,
+  "d": {
+    "user_id": "112547982808715264",
+    "message_id": "887589520638369793",
+    "member": {
+      "user": {
+        "username": "a",
+        "public_flags": 64,
+        "id": "112547982808715264",
+        "discriminator": "6010",
+        "avatar": "6c985a7e692f06dcf9e5f4f30ccd94bd"
+      },
+      "roles": [
+        "709664688245571664",
+        "829751356020752394",
+        "829751408358195210",
+        "829751383712071700"
+      ],
+      "premium_since": null,
+      "pending": false,
+      "nick": "a",
+      "mute": false,
+      "joined_at": "2016-03-27T18:35:59.676000+00:00",
+      "is_pending": false,
+      "hoisted_role": "709664688245571664",
+      "deaf": false,
+      "avatar": null
+    },
+    "emoji": {
+      "name": "?",
+      "id": null
+    },
+    "channel_id": "163717776609902592",
+    "guild_id": "163717776609902592"
+  }
+}

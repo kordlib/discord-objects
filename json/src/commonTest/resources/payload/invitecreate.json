@@ -1,0 +1,22 @@
+{
+  "t": "INVITE_CREATE",
+  "s": 3,
+  "op": 0,
+  "d": {
+    "uses": 0,
+    "temporary": false,
+    "max_uses": 0,
+    "max_age": 604800,
+    "inviter": {
+      "username": "A",
+      "public_flags": 64,
+      "id": "163717776609902592",
+      "discriminator": "6010",
+      "avatar": "6c"
+    },
+    "guild_id": "163717776609902592",
+    "created_at": "2021-09-20T21:24:13.754743+00:00",
+    "code": "de6NBFnD",
+    "channel_id": "163717776609902592"
+  }
+}

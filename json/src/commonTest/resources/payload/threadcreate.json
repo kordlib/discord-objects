@@ -1,0 +1,23 @@
+{
+  "t": "THREAD_CREATE",
+  "s": 7,
+  "op": 0,
+  "d": {
+    "type": 11,
+    "thread_metadata": {
+      "locked": false,
+      "auto_archive_duration": 1440,
+      "archived": false,
+      "archive_timestamp": "2021-09-18T21:54:35.970753+00:00"
+    },
+    "rate_limit_per_user": 0,
+    "parent_id": "163717776609902592",
+    "owner_id": "112547982808715264",
+    "name": "thread",
+    "message_count": 0,
+    "member_count": 1,
+    "last_message_id": null,
+    "id": "888904585706627133",
+    "guild_id": "163717776609902592"
+  }
+}

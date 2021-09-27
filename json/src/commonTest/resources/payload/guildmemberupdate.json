@@ -1,0 +1,27 @@
+{
+  "t": "GUILD_MEMBER_UPDATE",
+  "s": 11,
+  "op": 0,
+  "d": {
+    "user": {
+      "username": "a",
+      "public_flags": 64,
+      "id": "112547982808715264",
+      "discriminator": "6010",
+      "avatar": "6c005a7e692f06dcf9e5f4f30ccd97bd"
+    },
+    "roles": [
+      "709664688245571664",
+      "829751356020752394",
+      "829751408358195210",
+      "829751383712071700"
+    ],
+    "premium_since": null,
+    "pending": false,
+    "nick": null,
+    "joined_at": "2016-03-27T18:35:59.676000+00:00",
+    "is_pending": false,
+    "guild_id": "163717776609902592",
+    "avatar": null
+  }
+}
