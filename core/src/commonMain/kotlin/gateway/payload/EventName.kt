@@ -43,9 +43,9 @@ sealed class EventName(val value: String) {
     object GuildRoleUpdate : EventName("GUILD_ROLE_UPDATE")
     object GuildRoleDelete : EventName("GUILD_ROLE_DELETE")
 
-    object IntegrationsCreate : EventName("INTEGRATIONS_CREATE")
-    object IntegrationsUpdate : EventName("INTEGRATIONS_UPDATE")
-    object IntegrationsDelete : EventName("INTEGRATIONS_DELETE")
+    object IntegrationCreate : EventName("INTEGRATION_CREATE")
+    object IntegrationUpdate : EventName("INTEGRATION_UPDATE")
+    object IntegrationDelete : EventName("INTEGRATION_DELETE")
 
     object InteractionCreate : EventName("INTERACTION_CREATE")
 
@@ -110,9 +110,9 @@ sealed class EventName(val value: String) {
                 GuildRoleDelete,
                 GuildRoleUpdate,
                 GuildStickersUpdate,
-                IntegrationsCreate,
-                IntegrationsDelete,
-                IntegrationsUpdate,
+                IntegrationCreate,
+                IntegrationDelete,
+                IntegrationUpdate,
                 InteractionCreate,
                 InviteCreate,
                 InviteDelete,
