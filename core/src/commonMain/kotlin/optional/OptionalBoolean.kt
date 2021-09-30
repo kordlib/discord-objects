@@ -78,7 +78,7 @@ sealed class OptionalBoolean {
      *
      * @param value the value this optional wraps.
      */
-    class Value(val value: Boolean) : OptionalBoolean() {
+    class Value internal constructor(val value: Boolean) : OptionalBoolean() {
 
         /**
          * Destructures this optional to its [value].
@@ -93,6 +93,21 @@ sealed class OptionalBoolean {
         }
 
         override fun hashCode(): Int = value.hashCode()
+
+        companion object {
+            internal val TrueValue = Value(true)
+            internal val FalseValue = Value(false)
+        }
+
+    }
+
+    companion object {
+
+        fun Value(boolean: Boolean): Value = when(boolean){
+            true -> Value.TrueValue
+            false -> Value.FalseValue
+        }
+
     }
 
     internal object Serializer : KSerializer<OptionalBoolean> {
