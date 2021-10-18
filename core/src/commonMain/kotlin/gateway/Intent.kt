@@ -10,6 +10,13 @@ sealed class Intent(val code: DiscordBitSet) {
     constructor(code: Long) : this(DiscordBitSet(code))
 
     /**
+     * An Intent unknown to this version of Kord.
+     */
+    class Unknown(code: DiscordBitSet) : Intent(code) {
+        constructor(code: Long) : this(DiscordBitSet(code))
+    }
+
+    /**
      * Enables the following events:
      * - [GuildCreate]
      * - [GuildDelete]
@@ -21,7 +28,7 @@ sealed class Intent(val code: DiscordBitSet) {
      * - [ChannelDelete]
      * - [ChannelPinsUpdate]
      */
-    object Guilds : Intent(1 shl 0)
+    object Guilds : Intent(1L shl 0)
 
     /**
      * Enables the following events:
@@ -30,52 +37,52 @@ sealed class Intent(val code: DiscordBitSet) {
      * - [GuildMemberRemove]
      */
     @PrivilegedIntent
-    object GuildMembers : Intent(1 shl 1)
+    object GuildMembers : Intent(1L shl 1)
 
     /**
      * Enables the following events:
      * - [GuildBanAdd]
      * - [GuildBanRemove]
      */
-    object GuildBans : Intent(1 shl 2)
+    object GuildBans : Intent(1L shl 2)
 
     /**
      * Enables the following events:
      * - [GuildEmojisUpdate]
      */
-    object GuildEmojis : Intent(1 shl 3)
+    object GuildEmojis : Intent(1L shl 3)
 
     /**
      * Enables the following events:
      * - [GuildIntegrationsUpdate]
      */
-    object GuildIntegrations : Intent(1 shl 4)
+    object GuildIntegrations : Intent(1L shl 4)
 
     /**
      * Enables the following events:
      * - [WebhooksUpdate]
      */
-    object GuildWebhooks : Intent(1 shl 5)
+    object GuildWebhooks : Intent(1L shl 5)
 
     /**
      * Enables the following events:
      * - INVITE_CREATE
      * - INVITE_DELETE
      */
-    object GuildInvites : Intent(1 shl 6)
+    object GuildInvites : Intent(1L shl 6)
 
     /**
      * Enables the following events:
      * - [UpdateVoiceState]
      */
-    object GuildVoiceStates : Intent(1 shl 7)
+    object GuildVoiceStates : Intent(1L shl 7)
 
     /**
      * Enables the following events:
      * - [PresenceUpdate]
      */
     @PrivilegedIntent
-    object GuildPresences : Intent(1 shl 8)
+    object GuildPresences : Intent(1L shl 8)
 
     /**
      * Enables the following events:
@@ -84,7 +91,7 @@ sealed class Intent(val code: DiscordBitSet) {
      * - [MessageDelete]
      * - [MessageDeleteBulk]
      */
-    object GuildMessages : Intent(1 shl 9)
+    object GuildMessages : Intent(1L shl 9)
 
     /**
      * Enables the following events:
@@ -93,13 +100,13 @@ sealed class Intent(val code: DiscordBitSet) {
      * - [MessageReactionRemoveAll]
      * - MESSAGE_REACTION_REMOVE_EMOJI
      */
-    object GuildMessageReactions : Intent(1 shl 10)
+    object GuildMessageReactions : Intent(1L shl 10)
 
     /**
      * Enables the following events:
      * - [TypingStart]
      */
-    object GuildMessageTyping : Intent(1 shl 11)
+    object GuildMessageTyping : Intent(1L shl 11)
 
     /**
      * Enables the following events:
@@ -108,7 +115,7 @@ sealed class Intent(val code: DiscordBitSet) {
      * - [MessageUpdate]
      * - [MessageDelete]
      */
-    object DirectMessages : Intent(1 shl 12)
+    object DirectMessages : Intent(1L shl 12)
 
     /**
      * Enables the following events:
@@ -117,13 +124,14 @@ sealed class Intent(val code: DiscordBitSet) {
      * - [MessageReactionRemoveAll]
      * - MESSAGE_REACTION_REMOVE_EMOJI
      */
-    object DirectMessagesReactions : Intent(1 shl 13)
+    object DirectMessagesReactions : Intent(1L shl 13)
 
     /**
      * Enables the following events:
      * - [TypingStart]
      */
-    object DirectMessageTyping : Intent(1 shl 14)
+    object DirectMessageTyping : Intent(1L shl 14)
+
     companion object {
         @OptIn(PrivilegedIntent::class)
         val values: Set<Intent>

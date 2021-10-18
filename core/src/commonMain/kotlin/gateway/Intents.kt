@@ -14,15 +14,12 @@ import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 import kotlin.js.JsName
+import kotlin.jvm.JvmInline
 import kotlin.jvm.JvmName
 
 inline fun Intents(builder: Intents.IntentsBuilder.() -> Unit = {}): Intents {
     contract { callsInPlace(builder, InvocationKind.EXACTLY_ONCE) }
     return Intents.IntentsBuilder().apply(builder).flags()
-}
-
-fun Intents(vararg intents: Intents) = Intents {
-    intents.forEach { +it }
 }
 
 fun Intents(vararg intents: Intent) = Intents {
@@ -45,12 +42,12 @@ fun Intents(intents: Iterable<Intent>) = Intents {
  * A set of [intents][Intent] to be used while [identifying][Identify] a Gateway connection to communicate the events
  * the client wishes to receive.
  */
+@JvmInline
 @Serializable(with = Intents.Serializer::class)
-class Intents internal constructor(val code: DiscordBitSet) {
+value class Intents internal constructor(val code: DiscordBitSet) {
     /**
      *  Returns this [Intents] as a [Set] of [Intent] values.
      */
-    @OptIn(PrivilegedIntent::class)
     val values get() = Intent.values.filter { it.code in code }.toSet()
 
     operator fun contains(intent: Intent) = intent.code in code
@@ -78,7 +75,6 @@ class Intents internal constructor(val code: DiscordBitSet) {
      */
     operator fun minus(intent: Intents): Intents = Intents(code - intent.code)
 
-
     /**
      * copy this [Intents] and apply the [block] to it.
      */
@@ -91,13 +87,6 @@ class Intents internal constructor(val code: DiscordBitSet) {
         builder.apply(block)
         return builder.flags()
     }
-
-    override fun equals(other: Any?): Boolean {
-        if (other !is Intents) return false
-        return other.code == code
-    }
-
-    override fun hashCode(): Int = code.hashCode()
 
     override fun toString(): String = "Intents(values=$values)"
 
@@ -118,7 +107,6 @@ class Intents internal constructor(val code: DiscordBitSet) {
         val none: Intents = Intents()
 
     }
-
 
     class IntentsBuilder(internal var code: DiscordBitSet = EmptyBitSet()) {
         operator fun Intents.unaryPlus() {
@@ -148,7 +136,6 @@ class Intents internal constructor(val code: DiscordBitSet) {
         override fun serialize(encoder: Encoder, value: Intents) {
             val intents = value.code
             encoder.encodeString(intents.value)
-
         }
     }
 

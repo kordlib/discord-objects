@@ -3,7 +3,6 @@ package dev.kord.discord.objects.gateway.payload
 import dev.kord.discord.objects.gateway.Opcode
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.builtins.nullable
@@ -39,7 +38,7 @@ data class Heartbeat(
                     0 -> {
                         val opcode = decodeSerializableElement(descriptor, 0, Opcode.serializer())
                         if (opcode != Opcode.Heartbeat) throw SerializationException(
-                            "Heartbeat opcode expected but got ${opcode.code}"
+                            "Heartbeat opcode expected but got ${opcode.value}"
                         )
                     }
                     1 -> data = decodeNullableSerializableElement(descriptor, 1, Int.serializer().nullable)

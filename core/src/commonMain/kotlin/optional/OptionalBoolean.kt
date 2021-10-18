@@ -108,6 +108,8 @@ sealed class OptionalBoolean {
             false -> Value.FalseValue
         }
 
+        fun Missing() : Missing = Missing
+
     }
 
     internal object Serializer : KSerializer<OptionalBoolean> {

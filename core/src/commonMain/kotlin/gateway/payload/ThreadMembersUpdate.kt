@@ -1,6 +1,6 @@
 package dev.kord.discord.objects.gateway.payload
 
-import dev.kord.discord.objects.DiscordThreadMember
+import dev.kord.discord.objects.ThreadMemberData
 import dev.kord.discord.objects.Snowflake
 import dev.kord.discord.objects.gateway.payload.serializer.DispatchSerializer
 import dev.kord.discord.objects.optional.Optional
@@ -23,7 +23,7 @@ data class ThreadMembersUpdate(
         @SerialName("member_count")
         val memberCount: Int,
         @SerialName("added_members")
-        val addedMembers: Optional<List<DiscordThreadMember>> = Optional.Missing(),
+        val addedMembers: Optional<List<ThreadMemberData>> = Optional.Missing(),
         @SerialName("removed_member_ids")
         val removedMemberIds: Optional<List<Snowflake>> = Optional.Missing()
     )

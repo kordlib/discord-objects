@@ -3,15 +3,15 @@ package dev.kord.discord.objects
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.json.*
 
-internal object ChoiceSerializer : JsonContentPolymorphicSerializer<Choice<*>>(Choice::class) {
+internal object ChoiceSerializer : JsonContentPolymorphicSerializer<ApplicationCommandOptionChoiceData<*>>(ApplicationCommandOptionChoiceData::class) {
 
-    override fun selectDeserializer(element: JsonElement): DeserializationStrategy<out Choice<*>> {
+    override fun selectDeserializer(element: JsonElement): DeserializationStrategy<out ApplicationCommandOptionChoiceData<*>> {
         val value = element.jsonObject.getValue("value").jsonPrimitive
         return when{
-            value.isString -> Choice.StringChoice.serializer()
-            value.intOrNull != null -> Choice.IntChoice.serializer()
-            value.doubleOrNull != null -> Choice.NumberChoice.serializer()
-            else -> Choice.StringChoice.serializer()
+            value.isString -> ApplicationCommandOptionChoiceData.String.serializer()
+            value.intOrNull != null -> ApplicationCommandOptionChoiceData.Int.serializer()
+            value.doubleOrNull != null -> ApplicationCommandOptionChoiceData.Double.serializer()
+            else -> ApplicationCommandOptionChoiceData.String.serializer()
         }
     }
 

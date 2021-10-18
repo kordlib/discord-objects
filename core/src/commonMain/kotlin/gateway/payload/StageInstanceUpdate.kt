@@ -1,15 +1,15 @@
 package dev.kord.discord.objects.gateway.payload
 
-import dev.kord.discord.objects.DiscordStageInstance
+import dev.kord.discord.objects.StageInstanceData
 import dev.kord.discord.objects.gateway.payload.serializer.DispatchSerializer
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
 
 @Serializable(with = StageInstanceUpdate.Serializer::class)
 data class StageInstanceUpdate(
-    override val data: DiscordStageInstance,
+    override val data: StageInstanceData,
     override val sequence: Int
-) : Dispatch<DiscordStageInstance>() {
+) : Dispatch<StageInstanceData>() {
 
     override val name: EventName
         get() = EventName.StageInstanceUpdate

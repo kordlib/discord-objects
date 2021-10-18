@@ -1,9 +1,9 @@
 package dev.kord.discord.objects.gateway.payload
 
-import dev.kord.discord.objects.DiscordChannel
-import dev.kord.discord.objects.DiscordShard
-import dev.kord.discord.objects.DiscordUnavailableGuild
-import dev.kord.discord.objects.DiscordUser
+import dev.kord.discord.objects.ChannelData
+import dev.kord.discord.objects.ShardData
+import dev.kord.discord.objects.UnavailableGuildData
+import dev.kord.discord.objects.UserData
 import dev.kord.discord.objects.gateway.payload.serializer.DispatchSerializer
 import dev.kord.discord.objects.optional.Optional
 import kotlinx.serialization.KSerializer
@@ -21,13 +21,13 @@ data class Ready(
     data class Data(
         @SerialName("v")
         val version: Int,
-        val user: DiscordUser,
+        val user: UserData,
         @SerialName("private_channels")
-        val privateChannels: List<DiscordChannel>,
-        val guilds: List<DiscordUnavailableGuild>,
+        val privateChannels: List<ChannelData>,
+        val guilds: List<UnavailableGuildData>,
         @SerialName("session_id")
         val sessionId: String,
-        val shard: Optional<DiscordShard> = Optional.Missing(),
+        val shard: Optional<ShardData> = Optional.Missing(),
     )
     
     internal object Serializer : KSerializer<Ready> by DispatchSerializer(::Ready)

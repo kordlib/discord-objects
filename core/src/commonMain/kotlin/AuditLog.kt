@@ -1,10 +1,10 @@
 package dev.kord.discord.objects
 
+import dev.kord.discord.objects.api.serializer.NoTypeSerializer
 import dev.kord.discord.objects.optional.Optional
 import dev.kord.discord.objects.optional.OptionalSnowflake
 import dev.kord.discord.objects.optional.orEmpty
 import kotlinx.serialization.*
-import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.descriptors.*
 import kotlinx.serialization.encoding.*
 import dev.kord.discord.objects.DefaultMessageNotificationLevel as CommonDefaultMessageNotificationLevel
@@ -16,19 +16,19 @@ import dev.kord.discord.objects.api.Color as CommonColor
 
 @Serializable
 data class DiscordAuditLog(
-    val webhooks: List<DiscordWebhook>,
-    val users: List<DiscordUser>,
+    val webhooks: List<WebhookData>,
+    val users: List<UserData>,
     @SerialName("audit_log_entries")
     val auditLogEntries: List<DiscordAuditLogEntry>,
-    val integrations: List<DiscordPartialIntegration>,
-    val threads: List<DiscordChannel>
+    val integrations: List<PartialIntegrationData>,
+    val threads: List<ChannelData>
 )
 
 @Serializable
 data class DiscordAuditLogEntry(
     @SerialName("target_id")
     val targetId: Snowflake?,
-    val changes: Optional<List<@Contextual AuditLogChange<in @Serializable(NotSerializable::class) Any?>>> = Optional.Missing(),
+    val changes: Optional<List<@Contextual AuditLogChange<in @Serializable(with = NoTypeSerializer::class) Any?>>> = Optional.Missing(),
     @SerialName("user_id")
     val userId: Snowflake,
     val id: Snowflake,
@@ -197,10 +197,10 @@ sealed class AuditLogChangeKey<T>(val name: String, val serializer: KSerializer<
     object VanityUrlCode : AuditLogChangeKey<String>("vanity_url_code", serializer<String>())
 
     @SerialName("\$add")
-    object Add : AuditLogChangeKey<List<DiscordPartialRole>>("\$<List<add", serializer<List<DiscordPartialRole>>())
+    object Add : AuditLogChangeKey<List<PartialRoleData>>("\$<List<add", serializer<List<PartialRoleData>>())
 
     @SerialName("\$remove")
-    object Remove : AuditLogChangeKey<List<DiscordPartialRole>>("\$<List<remove", serializer<List<DiscordPartialRole>>())
+    object Remove : AuditLogChangeKey<List<PartialRoleData>>("\$<List<remove", serializer<List<PartialRoleData>>())
 
     @SerialName("prune_delete_days")
     object PruneDeleteDays : AuditLogChangeKey<Int>("prune_delete_days", serializer<Int>())
@@ -224,7 +224,7 @@ sealed class AuditLogChangeKey<T>(val name: String, val serializer: KSerializer<
     object Bitrate : AuditLogChangeKey<Int>("bitrate", serializer<Int>())
 
     @SerialName("permission_overwrites")
-    object PermissionOverwrites : AuditLogChangeKey<List<Overwrite>>("permission_overwrites", serializer<List<Overwrite>>())
+    object PermissionOverwrites : AuditLogChangeKey<List<OverwriteData>>("permission_overwrites", serializer<List<OverwriteData>>())
 
     @SerialName("nsfw")
     object Nsfw : AuditLogChangeKey<Boolean>("nsfw", serializer<Boolean>())

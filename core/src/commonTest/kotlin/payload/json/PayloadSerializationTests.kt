@@ -1,12 +1,9 @@
 package payload.json
 
-import dev.kord.discord.objects.file
+import dev.kord.discord.objects.payloadFile
 import dev.kord.discord.objects.gateway.payload.*
 import dev.kord.discord.objects.json
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.serializer
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -14,7 +11,7 @@ class PayloadSerializationTests {
 
     @Suppress("LocalVariableName")
     private inline fun<reified T: Payload>testEncode(serializer: KSerializer<T>){
-        val fileContent = file(T::class.simpleName!!.lowercase())
+        val fileContent = payloadFile(T::class.simpleName!!.lowercase())
         val decoded = json.decodeFromString(serializer, fileContent)
         val encoded = json.encodeToString(serializer, decoded)
         val `re-decoded` = json.decodeFromString(serializer, encoded)
@@ -150,7 +147,7 @@ class PayloadSerializationTests {
     fun resumed() = testEncode(Resumed.serializer())
 
     @Test
-    fun statusUpdate() = testEncode(StatusUpdate.serializer())
+    fun statusUpdate() = testEncode(UpdatePresence.serializer())
 
     @Test
     fun threadCreate() = testEncode(ThreadCreate.serializer())

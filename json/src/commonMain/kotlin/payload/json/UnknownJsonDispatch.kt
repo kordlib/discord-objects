@@ -27,7 +27,7 @@ data class UnknownJsonDispatch(
 
         override fun transformSerialize(element: JsonElement): JsonElement {
             val json = element.jsonObject.toMutableMap()
-            json["op"] = JsonPrimitive(Opcode.Dispatch.code)
+            json["op"] = JsonPrimitive(Opcode.Dispatch.value)
             return JsonObject(json)
         }
 

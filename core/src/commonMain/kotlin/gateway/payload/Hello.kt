@@ -37,7 +37,7 @@ data class Hello(@SerialName("d") val data: Data) : Event {
                     0 -> {
                         val opcode = decodeSerializableElement(descriptor, 0, Opcode.serializer())
                         if (opcode != Opcode.Hello) throw SerializationException(
-                            "Heartbeat opcode expected but got ${opcode.code}"
+                            "Heartbeat opcode expected but got ${opcode.value}"
                         )
                     }
                     1 -> data = decodeSerializableElement(descriptor, 1, Data.serializer())

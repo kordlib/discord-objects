@@ -1,6 +1,6 @@
 package dev.kord.discord.objects
 
-const val RESOURCE_PATH = "./src/commonTest/resources/json/payload"
+const val RESOURCE_PATH = "./src/commonTest/resources/json"
 
 expect class Resource(name: String) {
     val name: String
@@ -9,4 +9,6 @@ expect class Resource(name: String) {
     fun readText(): String
 }
 
-fun file(name: String) = Resource("$name.json").readText()
+fun payloadFile(name: String) = Resource("payload/$name.json").readText()
+
+fun malformedPayloadFile(name: String) = Resource("malformed/payload/$name.json").readText()

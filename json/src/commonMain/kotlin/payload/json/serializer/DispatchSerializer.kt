@@ -13,8 +13,8 @@ internal object DispatchSerializer : JsonContentPolymorphicSerializer<Dispatch<*
     @OptIn(ExperimentalSerializationApi::class)
     override fun selectDeserializer(element: JsonElement): DeserializationStrategy<out Dispatch<*>> {
         val json = element.jsonObject
-        require(json["op"]?.jsonPrimitive?.int == Opcode.Dispatch.code) {
-            "Dispatch Serializer expected opcode ${Opcode.Dispatch.code} but got ${json["op"]}"
+        require(json["op"]?.jsonPrimitive?.int == Opcode.Dispatch.value) {
+            "Dispatch Serializer expected opcode ${Opcode.Dispatch.value} but got ${json["op"]}"
         }
 
         return when (

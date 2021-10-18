@@ -1,7 +1,6 @@
 package dev.kord.discord.objects.gateway.payload
 
-import dev.kord.discord.objects.DiscordGuildMember
-import dev.kord.discord.objects.DiscordPresenceUpdate
+import dev.kord.discord.objects.GuildMemberData
 import dev.kord.discord.objects.Snowflake
 import dev.kord.discord.objects.gateway.payload.serializer.DispatchSerializer
 import dev.kord.discord.objects.optional.Optional
@@ -20,14 +19,14 @@ data class GuildMembersChunk(
     data class Data(
         @SerialName("guild_id")
         val guildId: Snowflake,
-        val members: List<DiscordGuildMember>,
+        val members: List<GuildMemberData>,
         @SerialName("chunk_index")
         val chunkIndex: Int,
         @SerialName("chunk_count")
         val chunkCount: Int,
         @SerialName("not_found")
         val notFound: Optional<Set<Snowflake>> = Optional.Missing(),
-        val presences: Optional<List<DiscordPresenceUpdate>> = Optional.Missing(),
+        val presences: Optional<List<PresenceUpdate.Data>> = Optional.Missing(),
         val nonce: Optional<String> = Optional.Missing()
     )
 

@@ -1,90 +1,104 @@
 package dev.kord.discord.objects.gateway
 
-import kotlinx.serialization.KSerializer
+import dev.kord.discord.objects.api.EnumType
+import dev.kord.discord.objects.api.EnumTypeCompanion
+import dev.kord.discord.objects.api.serializer.IntEnumTypeSerializer
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.descriptors.PrimitiveKind
-import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
 
 @Serializable(with = Opcode.Serializer::class)
-enum class Opcode(val code: Int) {
+sealed class Opcode(override val value: Int) : EnumType<Int> {
+
+    override fun equals(other: Any?): Boolean {
+        return if (other !is Opcode) false
+        else other.value == value
+    }
+
+    override fun hashCode(): Int = value.hashCode()
+
+    override fun toString(): String = this::class.simpleName.orEmpty()
+
     /** The default code for unknown values. */
-    Unknown(Int.MIN_VALUE),
+    class Unknown(value: Int) : Opcode(value) {
+        override fun toString(): String = "Unknown(value=$value)"
+    }
 
     /**
      * An event was dispatched.
      */
-    Dispatch(0),
+    object Dispatch : Opcode(0)
 
     /**
      * Fired periodically by the client to keep the connection alive.
      */
-    Heartbeat(1),
+    object Heartbeat : Opcode(1)
 
     /**
      * Starts a new session during the initial handshake.
      */
-    Identify(2),
+    object Identify : Opcode(2)
 
     /**
      * Update the client's presence.
      */
-    StatusUpdate(3),
+    object StatusUpdate : Opcode(3)
 
     /**
      * Used to join/leave or move between voice channels.
      */
-    VoiceStateUpdate(4),
+    object VoiceStateUpdate : Opcode(4)
 
     /**
      * You should attempt to reconnect and resume immediately.
      */
-    Resume(6),
+    object Resume : Opcode(6)
 
     /**
      * You should attempt to reconnect and resume immediately.
      */
-    Reconnect(7),
+    object Reconnect : Opcode(7)
 
     /**
      * Request information about offline guild members in a large guild.
      */
-    RequestGuildMembers(8),
+    object RequestGuildMembers : Opcode(8)
 
     /**
      * The session has been invalidated. You should reconnect and identify/resume accordingly.
      */
-    InvalidSession(9),
+    object InvalidSession : Opcode(9)
 
     /**
      * Sent immediately after connecting, contains the `heartbeat_interval` to use.
      */
-    Hello(10),
+    object Hello : Opcode(10)
 
     /**
      * Sent in response to receiving a heartbeat to acknowledge that it has been received.
      */
-    HeartbeatACK(11);
+    object HeartbeatACK : Opcode(11)
 
-    companion object {
-        //plugin won't generate this for whatever reason
-        fun serializer() : KSerializer<Opcode> = Serializer
+    companion object : EnumTypeCompanion<Opcode> {
+
+        operator fun invoke(value: Int): Opcode = values.firstOrNull { it.value == value } ?: Unknown(value)
+
+        override val values: Set<Opcode>
+            get() = setOf(
+                Dispatch,
+                Heartbeat,
+                Identify,
+                StatusUpdate,
+                VoiceStateUpdate,
+                Resume,
+                Reconnect,
+                RequestGuildMembers,
+                InvalidSession,
+                Hello
+            )
+
     }
 
-    internal object Serializer : KSerializer<Opcode> {
-        override val descriptor: SerialDescriptor
-            get() = PrimitiveSerialDescriptor("op", PrimitiveKind.INT)
-
-        override fun deserialize(decoder: Decoder): Opcode {
-            val code = decoder.decodeInt()
-            return values().firstOrNull { it.code == code } ?: Unknown
-        }
-
-        override fun serialize(encoder: Encoder, value: Opcode) {
-            encoder.encodeInt(value.code)
-        }
-    }
+    internal object Serializer : IntEnumTypeSerializer<Opcode>(
+        "Opcode", values, ::Unknown
+    )
 
 }

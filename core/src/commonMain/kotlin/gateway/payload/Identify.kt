@@ -1,7 +1,6 @@
 package dev.kord.discord.objects.gateway.payload
 
-import dev.kord.discord.objects.DiscordShard
-import dev.kord.discord.objects.gateway.DiscordPresence
+import dev.kord.discord.objects.ShardData
 import dev.kord.discord.objects.gateway.Intents
 import dev.kord.discord.objects.gateway.Opcode
 import dev.kord.discord.objects.gateway.payload.serializer.CommandSerializer
@@ -23,12 +22,12 @@ data class Identify(
     @Serializable
     data class Data(
         internal val token: String,
-        val properties: Properties,
+        val properties: ConnectionProperties,
         val compress: OptionalBoolean = OptionalBoolean.Missing,
         @SerialName("large_threshold")
         val largeThreshold: OptionalInt = OptionalInt.Missing,
-        val shard: Optional<DiscordShard> = Optional.Missing(),
-        val presence: Optional<DiscordPresence> = Optional.Missing(),
+        val shard: Optional<ShardData> = Optional.Missing(),
+        val presence: Optional<UpdatePresence.Data> = Optional.Missing(),
         val intents: Intents,
     ) {
 
@@ -48,7 +47,7 @@ data class Identify(
     }
 
     @Serializable
-    data class Properties(
+    data class ConnectionProperties(
         @SerialName("\$os")
         val os: String,
         @SerialName("\$browser")

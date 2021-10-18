@@ -63,8 +63,6 @@ kotlin {
     }
 }
 
-
-
 tasks.register<Copy>("copyTestResourcesForJs") {
     from(layout.buildDirectory.dir("$projectDir/src/commonTest/resources"))
     into(layout.buildDirectory.dir("${rootProject.buildDir}/js/packages/${rootProject.name}-${project.name}-test/src/commonTest/resources"))

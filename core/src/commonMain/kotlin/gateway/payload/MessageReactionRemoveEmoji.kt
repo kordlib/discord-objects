@@ -13,7 +13,6 @@ data class MessageReactionRemoveEmoji(
 ) : Dispatch<MessageReactionRemoveEmoji.Data>() {
     override val name: EventName get() = EventName.MessageReactionRemoveEmoji
 
-
     @Serializable
     data class Data(
         @SerialName("channel_id")
@@ -22,14 +21,14 @@ data class MessageReactionRemoveEmoji(
         val guildId: Snowflake,
         @SerialName("message_id")
         val messageId: Snowflake,
-        val emoji: DiscordRemovedReactionEmoji,
+        val emoji: Emoji,
+    )
+
+    @Serializable
+    data class Emoji(
+        val id: Snowflake?,
+        val name: String?,
     )
 
     internal object Serializer : KSerializer<MessageReactionRemoveEmoji> by DispatchSerializer(::MessageReactionRemoveEmoji)
 }
-
-@Serializable
-data class DiscordRemovedReactionEmoji(
-    val id: Snowflake?,
-    val name: String?,
-)

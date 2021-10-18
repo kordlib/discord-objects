@@ -1,6 +1,5 @@
 package dev.kord.discord.objects.gateway.payload
 
-import dev.kord.discord.objects.NotSerializable
 import dev.kord.discord.objects.gateway.Opcode
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.KSerializer

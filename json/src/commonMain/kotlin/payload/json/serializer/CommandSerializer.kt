@@ -5,7 +5,6 @@ import dev.kord.discord.objects.gateway.payload.*
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.json.*
-import payload.json.UnknownJsonEvent
 
 internal object CommandSerializer : JsonContentPolymorphicSerializer<Command<*>>(Command::class) {
 
@@ -15,11 +14,11 @@ internal object CommandSerializer : JsonContentPolymorphicSerializer<Command<*>>
             "command is expected to contain an opcode but was null"
         )
 
-        val opcode = Opcode.values().firstOrNull { it.code == opCodeValue }
+        val opcode = Opcode.values.firstOrNull { it.value == opCodeValue }
         return when (opcode) {
             Opcode.Heartbeat -> Heartbeat.serializer()
             Opcode.Identify -> Identify.serializer()
-            Opcode.StatusUpdate -> StatusUpdate.serializer()
+            Opcode.StatusUpdate -> UpdatePresence.serializer()
             Opcode.VoiceStateUpdate -> UpdateVoiceState.serializer()
             Opcode.Resume -> Resume.serializer()
             else -> throw SerializationException(

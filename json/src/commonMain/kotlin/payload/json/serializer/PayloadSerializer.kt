@@ -14,13 +14,13 @@ internal object PayloadSerializer : JsonContentPolymorphicSerializer<Payload>(Pa
         val opCodeValue = json["op"]?.jsonPrimitive?.int ?: throw SerializationException(
             "command is expected to contain an opcode but was null"
         )
-        val opcode = Opcode.values().firstOrNull { it.code == opCodeValue }
+        val opcode = Opcode.values.firstOrNull { it.value == opCodeValue }
         return when (opcode) {
-            null, Opcode.Unknown -> UnknownJsonEvent.serializer()
+            null, is Opcode.Unknown -> UnknownJsonEvent.serializer()
             Opcode.Dispatch -> DispatchSerializer
             Opcode.Heartbeat -> Heartbeat.serializer()
             Opcode.Identify -> Identify.serializer()
-            Opcode.StatusUpdate -> StatusUpdate.serializer()
+            Opcode.StatusUpdate -> UpdatePresence.serializer()
             Opcode.VoiceStateUpdate -> UpdateVoiceState.serializer()
             Opcode.Resume -> Resume.serializer()
             Opcode.Reconnect -> Reconnect.serializer()

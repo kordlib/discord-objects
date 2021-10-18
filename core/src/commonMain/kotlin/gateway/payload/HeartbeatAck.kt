@@ -43,7 +43,7 @@ object HeartbeatAck : Event {
                     0 -> {
                         val opcode = decodeSerializableElement(descriptor, 0, Opcode.serializer())
                         if (opcode != Opcode.HeartbeatACK) throw SerializationException(
-                            "Heartbeat opcode expected but got ${opcode.code}"
+                            "Heartbeat opcode expected but got ${opcode.value}"
                         )
                     }
                     1 -> decodeNullableSerializableElement(descriptor, 1, Unit.serializer().nullable)

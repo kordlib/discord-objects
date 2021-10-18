@@ -1,15 +1,12 @@
 package dev.kord.discord.objects.gateway.payload
 
-import kotlinx.serialization.KSerializer
+import dev.kord.discord.objects.api.EnumType
+import dev.kord.discord.objects.api.EnumTypeCompanion
+import dev.kord.discord.objects.api.serializer.StringEnumTypeSerializer
 import kotlinx.serialization.Serializable
-import kotlinx.serialization.descriptors.PrimitiveKind
-import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
 
 @Serializable(with = EventName.Serializer::class)
-sealed class EventName(val value: String) {
+sealed class EventName(override val value: String) : EnumType<String> {
 
     override fun toString(): String = value
 
@@ -79,11 +76,11 @@ sealed class EventName(val value: String) {
 
     object WebhooksUpdate : EventName("WEBHOOKS_UPDATE")
 
-    companion object {
+    companion object : EnumTypeCompanion<EventName> {
 
         operator fun invoke(value: String): EventName = values.firstOrNull { it.value == value } ?: Unknown(value)
 
-        val values: Set<EventName>
+        override val values: Set<EventName>
             get() = setOf(
                 ChannelCreate,
                 ChannelDelete,
@@ -138,18 +135,8 @@ sealed class EventName(val value: String) {
             )
     }
 
-    internal class Serializer : KSerializer<EventName> {
-
-        override val descriptor: SerialDescriptor = PrimitiveSerialDescriptor("t", PrimitiveKind.STRING)
-
-        override fun serialize(encoder: Encoder, value: EventName) {
-            encoder.encodeString(value.value)
-        }
-
-        override fun deserialize(decoder: Decoder): EventName {
-            return invoke(decoder.decodeString())
-        }
-
-    }
+    internal object Serializer : StringEnumTypeSerializer<EventName>(
+        "EventName", values, ::Unknown
+    )
 
 }

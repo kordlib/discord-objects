@@ -39,7 +39,7 @@ data class InvalidSession(
                     0 -> {
                         val opcode = decodeSerializableElement(descriptor, 0, Opcode.serializer())
                         if (opcode != Opcode.InvalidSession) throw SerializationException(
-                            "Heartbeat opcode expected but got ${opcode.code}"
+                            "Heartbeat opcode expected but got ${opcode.value}"
                         )
                     }
                     1 -> data = decodeNullableSerializableElement(descriptor, 1, Boolean.serializer().nullable)

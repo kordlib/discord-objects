@@ -274,3 +274,13 @@ fun Optional<Boolean>.toPrimitive(): OptionalBoolean = when (this) {
     is Value -> OptionalBoolean.Value(value)
     else -> OptionalBoolean.Missing
 }
+
+fun Optional<Int>.toPrimitive(): OptionalInt = when (this) {
+    is Value -> OptionalInt.Value(value)
+    else -> OptionalInt.Missing
+}
+
+fun Optional<Long>.toPrimitive(): OptionalLong = when (this) {
+    is Value -> OptionalLong.Value(value)
+    else -> OptionalLong.Missing
+}

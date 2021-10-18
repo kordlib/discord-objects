@@ -3,7 +3,6 @@ package dev.kord.discord.objects.gateway.payload
 import dev.kord.discord.objects.Snowflake
 import dev.kord.discord.objects.gateway.Opcode
 import dev.kord.discord.objects.gateway.payload.serializer.CommandSerializer
-import dev.kord.discord.objects.gateway.payload.serializer.DispatchSerializer
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

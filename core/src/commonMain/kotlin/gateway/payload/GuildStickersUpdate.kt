@@ -1,12 +1,11 @@
 package dev.kord.discord.objects.gateway.payload
 
-import dev.kord.discord.objects.DiscordSticker
+import dev.kord.discord.objects.StickerData
 import dev.kord.discord.objects.Snowflake
 import dev.kord.discord.objects.gateway.payload.serializer.DispatchSerializer
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-
 
 @Serializable(with = GuildStickersUpdate.Serializer::class)
 data class GuildStickersUpdate(
@@ -21,7 +20,7 @@ data class GuildStickersUpdate(
     data class Data(
         @SerialName("guild_info")
         val guildId: Snowflake,
-        val stickers: List<DiscordSticker>
+        val stickers: List<StickerData>
     )
 
     internal object Serializer : KSerializer<GuildStickersUpdate> by DispatchSerializer(::GuildStickersUpdate)
